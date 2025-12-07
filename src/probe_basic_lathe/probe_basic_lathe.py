@@ -18,10 +18,17 @@ from qtpyvcp.utilities import logger
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 from qtpyvcp.utilities.settings import getSetting, setSetting  # <-- ADD THIS LINE
 
-sys.path.insert(0,'/usr/lib/python3/dist-packages/probe_basic_lathe')
-from . import probe_basic_lathe_rc
-
 LOG = logger.getLogger('QtPyVCP.' + __name__)
+
+sys.path.insert(0,'/usr/lib/python3/dist-packages/probe_basic_lathe')
+try:
+    from . import probe_basic_lathe_rc
+except ImportError:
+    LOG.warning(
+        "probe_basic_lathe_rc module not found; resource images may not be available. "
+        "Generate the resource file from probe_basic_lathe.qrc if you need the bundled assets."
+    )
+
 VCP_DIR = os.path.abspath(os.path.dirname(__file__))
 INIFILE = linuxcnc.ini(os.getenv("INI_FILE_NAME"))
 
