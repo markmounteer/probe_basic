@@ -2,7 +2,7 @@ from qtpy.QtCore import Qt, QModelIndex
 from qtpy.QtGui import QStandardItemModel
 from qtpy.QtWidgets import QTableView, QStyledItemDelegate
 
-from qtpyvcp.ops.drill_ops import DrillOps
+from qtpyvcp.conversational.ops.drill_ops import DrillOps
 from .drill_widget import DrillWidgetBase
 from .float_line_edit import FloatLineEdit
 

@@ -1,4 +1,4 @@
-from qtpyvcp.ops.drill_ops import DrillOps
+from qtpyvcp.conversational.ops.drill_ops import DrillOps
 from .drill_widget import DrillWidgetBase
 
 
