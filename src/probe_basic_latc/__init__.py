@@ -3,6 +3,7 @@ __version__ = '0.0.1'
 
 import os
 import qtpyvcp
+from probe_basic.mdihistory_patch import ensure_mdihistory_remove_all
 
 VCP_DIR = os.path.realpath(os.path.dirname(__file__))
 VCP_CONFIG_FILE = os.path.join(VCP_DIR, 'probe_basic.yml')
@@ -16,6 +17,7 @@ def main(opts=None):
                           vcp_name='Probe Basic',
                           vcp_version=__version__)
 
+    ensure_mdihistory_remove_all()
     qtpyvcp.run_vcp(opts, VCP_CONFIG_FILE)
 
 
