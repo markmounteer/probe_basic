@@ -1,4 +1,4 @@
-from qtpyvcp.ops.face_ops import FaceOps
+from qtpyvcp.conversational.ops.face_ops import FaceOps
 
 from .base_widget import ConversationalBaseWidget
 
