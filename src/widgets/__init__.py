@@ -5,6 +5,7 @@ from widgets.atc_widget.atc import DynATC
 from widgets.rack_atc_widget.rack_atc import RackATC
 
 from widgets.conversational.facing import FacingWidget
+from widgets.gcode_text_edit import GcodeTextEdit
 from widgets.conversational.xy_coord import XYCoordWidget
 from widgets.conversational.hole_circle import HoleCircleWidget
 from widgets.conversational.int_line_edit import IntLineEdit
@@ -49,3 +50,8 @@ class XYCoordWidgetPlugin(_DesignerPlugin):
 class FacingWidgetPlugin(_DesignerPlugin):
     def pluginClass(self):
         return FacingWidget
+
+
+class GcodeTextEditPlugin(_DesignerPlugin):
+    def pluginClass(self):
+        return GcodeTextEdit
